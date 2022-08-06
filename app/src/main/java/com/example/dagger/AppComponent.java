@@ -8,6 +8,7 @@ import dagger.Component;
 @Component(modules = RiverModule.class)
 public interface AppComponent {
 
-    River getRiver();
+//    River getRiver();
 
+    CoffeComponent.Builder coffeComponentBuilder();
 }

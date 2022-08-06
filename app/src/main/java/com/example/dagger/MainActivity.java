@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 //        component.Inject(this);
 
          AppComponent component = ((MainApplication)getApplication()).getAppComponent();
-         CoffeComponent coffeComponent = DaggerCoffeComponent.builder().milk(4).sugar(2).appComponent(component).build();
+         CoffeComponent coffeComponent = component.coffeComponentBuilder().milk(4).sugar(2).build();
         coffeComponent.Inject(this);
 
 

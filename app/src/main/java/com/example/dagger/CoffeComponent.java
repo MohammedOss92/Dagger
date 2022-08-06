@@ -4,17 +4,19 @@ import javax.inject.Singleton;
 
 import dagger.BindsInstance;
 import dagger.Component;
+import dagger.Subcomponent;
 
 @ActivityScope
                 //connect modules = CoffeModule.class
-@Component(dependencies = AppComponent.class)//(modules = RiverModule.class)
+@Subcomponent()//(modules = RiverModule.class)
 public interface CoffeComponent {
 
     Coffe getCoffe();
 
     void Inject(MainActivity activity);
 
-    @Component.Builder
+//    @Component.Builder
+    @Subcomponent.Builder
     interface Builder{
 
         @BindsInstance
@@ -22,7 +24,7 @@ public interface CoffeComponent {
 
         CoffeComponent build();
 
-        Builder appComponent (AppComponent appComponent);
+//        Builder appComponent (AppComponent appComponent);
 
         @BindsInstance
         Builder milk(@milk int milk);
